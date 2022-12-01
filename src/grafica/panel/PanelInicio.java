@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import InterfazGrafica.InterfazGrafica;
+import music.Player;
 
 public class PanelInicio extends JPanel {
 	
@@ -17,9 +18,12 @@ public class PanelInicio extends JPanel {
 	protected InterfazGrafica interfaz;
 	protected JButton [] botones;
 	protected final String dir = "src/assets/";
+	protected Player player;
 
 	public PanelInicio(InterfazGrafica interfazGrafica) {
 		super();
+		this.player = new Player();
+		this.player.playInicioDeJuego();
 		this.interfaz = interfazGrafica;
 		setLayout(null);
 		setBounds(0,0,interfazGrafica.getAncho()-15,interfazGrafica.getAlto()-40);
@@ -83,6 +87,7 @@ public class PanelInicio extends JPanel {
 	}
 	
 	protected void crearJuego(String s) {
+		this.player.close();
 		PanelJuego g = interfaz.getGUIJuego();
 		if(g!=null){
 			g.terminate();

@@ -15,9 +15,11 @@ import logica.juego.horda.Horda;
 import logica.juego.mapa.Mapa;
 import logica.juego.nivel.Nivel;
 import logica.juego.nivel.Nivel1;
+import music.Player;
 
 public class Juego {
 
+	protected Player player;
 	protected PanelJuego panel;
 	protected Mapa mapa;
 	protected Nivel nivelActual;
@@ -37,9 +39,11 @@ public class Juego {
 		this.nivelActual.generarHordas();
 		this.timerDeMovimiento = new TimerMovimientoEnemigo();
 		this.timerDeAtaqueEnemigo = new TimerAtaqueEnemigo();
+		this.player = new Player();
 	}
 	
 	public void iniciarPartida() {
+		this.player.playMusicaEnPartida();
 		this.iniciarGeneracionDeEnemigos();
 		this.iniciarGeneracionDeSoles();
 		this.iniciarTimerMovimiento();
@@ -165,6 +169,10 @@ public class Juego {
 	
 	public void noPermitirAgregarAliado() {
 		this.accion.setDisponible(false);
+	}
+	
+	public Player getPlayer() {
+		return this.player;
 	}
 	
 }

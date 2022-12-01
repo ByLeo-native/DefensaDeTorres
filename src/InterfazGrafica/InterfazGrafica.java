@@ -1,10 +1,9 @@
 package InterfazGrafica;
 
-
-
 import grafica.panel.PanelInformacion;
 import grafica.panel.PanelInicio;
 import grafica.panel.PanelJuego;
+import music.Player;
 
 import java.awt.EventQueue;
 import java.io.FileInputStream;
@@ -18,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class InterfazGrafica extends JFrame {
+	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	ImageIcon image = new ImageIcon("src/Sprites/IconosBotones/Hojas.gif");

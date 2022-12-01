@@ -25,4 +25,7 @@ public class TimerAtaqueAliado extends TimerAliado {
 	public boolean hayEnemigosEnLaFila(int fila) {
 		return this.filasConEnemigos[fila] > 0;
 	}
+
+	@Override
+	public void generarSonido() {}
 }
