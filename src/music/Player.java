@@ -80,4 +80,21 @@ public class Player {
 	public void close() {
 		this.clip.close();
 	}
+	
+	public void kill() {
+		this.clip.close();
+		this.clip = null;
+	}
+
+	public void playComer() {
+		try {
+	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("src/music/eat.wav").getAbsoluteFile());
+	        clip.close();
+	        clip.open(audioInputStream);
+	        clip.start();
+	    } catch(Exception ex) {
+	        System.out.println("Error with playing sound.");
+	        ex.printStackTrace();
+	    }
+	}
 }

@@ -10,6 +10,5 @@ public class TimerGeneracionDeSoles extends TimerAliado {
 
 	@Override
 	public void generarSonido() {
-		this.player.playGeneracionDeSoles();
 	}
 }

@@ -11,14 +11,12 @@ public abstract class TimerAliado implements Runnable {
 	protected volatile boolean execute;
 	protected volatile List<Aliado> enEjecucion, paraInsertar, paraEliminar;
 	protected int tiempo;
-	protected Player player;
 	
 	public TimerAliado() {
 		this.paraInsertar = new ArrayList<Aliado>();
 		this.paraEliminar = new ArrayList<Aliado>();
 		this.enEjecucion = new ArrayList<Aliado>();
 		this.execute = true;
-		this.player = new Player();
 	}
 	
 	public void agregarAliado(Aliado e){

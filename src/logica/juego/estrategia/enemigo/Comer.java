@@ -15,6 +15,7 @@ public class Comer extends EstrategiaEnemigo {
 
 	@Override
 	public void actuar() {
+		this.player.playComer();
 		this.aliado.setVida(this.aliado.getVida() - this.enemigo.getDanio());
 		if(this.aliado.getVida() <= 0) {
 			this.aliado.getMapa().removerEntidad(aliado);

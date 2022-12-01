@@ -111,7 +111,7 @@ public class Juego {
 
 	public void perder(){
 		finalizar();
-		//player.playDerrota();
+		player.playDerrota();
 		//this.panel.perder();
 		//this.panel.finalizar();
 	}
@@ -134,7 +134,7 @@ public class Juego {
 		this.generador.terminate();
 		this.hiloDeGeneracion.stop();
 		//this.panel.finalizar();
-		//player.playVictoria();
+		player.playVictoria();
 		//this.panel.ganar();
 	}
 	
